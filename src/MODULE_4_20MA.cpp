@@ -94,7 +94,7 @@ uint8_t MODULE_4_20MA::getI2CAddress(void) {
     uint8_t RegValue;
 
     _wire->requestFrom(_addr, 1);
-    RegValue = Wire.read();
+    RegValue = _wire.read();
     return RegValue;
 }
 
@@ -106,6 +106,6 @@ uint8_t MODULE_4_20MA::getFirmwareVersion(void) {
     uint8_t RegValue;
 
     _wire->requestFrom(_addr, 1);
-    RegValue = Wire.read();
+    RegValue = _wire.read();
     return RegValue;
 }
